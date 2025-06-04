@@ -1,11 +1,12 @@
 import type { Component } from 'solid-js';
 import { createSignal, createEffect, For, Show } from 'solid-js';
 
-import logo from './logo.svg';
+import logo from './assets/icons/logo.svg';
 import type { PokemonBasic, Pokemon } from './types/pokemon';
 import { fetchPokemonList } from './services/pokemonService';
 import PokemonCard from './components/PokemonCard';
 import PokemonModal from './components/PokemonModal';
+import Footer from './components/Footer';
 
 const App: Component = () => {
   const [pokemonList, setPokemonList] = createSignal<PokemonBasic[]>([]);
@@ -189,20 +190,8 @@ const App: Component = () => {
         onClose={closeModal}
       />
 
-      {/* Footer minimalista */}
-      <footer class="bg-white border-t border-gray-200 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div class="text-center space-y-4">
-            <div class="flex justify-center items-center space-x-2">
-              <img src={logo} alt="Logo" class="w-6 h-6 opacity-60" />
-              <span class="text-sm text-gray-500 font-medium">Pokédex</span>
-            </div>
-            <p class="text-xs text-gray-400 font-light">
-              Construido con SolidJS • Datos de PokéAPI
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer con stack tecnológico */}
+      <Footer />
     </div>
   );
 };

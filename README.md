@@ -34,4 +34,31 @@ npm run dev
 npm run build
 ```
 
+## 🌐 Despliegue en Cloudflare Pages
+
+### Configuración automática
+```bash
+# Desplegar con un solo comando
+npm run deploy
+```
+
+### Configuración manual
+```bash
+# Construir la aplicación
+npm run build
+
+# Desplegar con Wrangler
+npx wrangler pages deploy dist
+```
+
+### Primera vez
+1. Instala Wrangler globalmente: `npm install -g wrangler`
+2. Autentícate con Cloudflare: `wrangler login`
+3. Despliega: `npm run deploy`
+
+La aplicación incluye:
+- ✅ `wrangler.toml` configurado para SPA
+- ✅ `_redirects` para ruteo del cliente
+- ✅ Scripts de npm para despliegue automatizado
+
 ## 📁 Estructura
