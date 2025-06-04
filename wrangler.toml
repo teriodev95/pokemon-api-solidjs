@@ -1,0 +1,13 @@
+name = "pokemon-api-solidjs"
+compatibility_date = "2025-06-04"
+
+[assets]
+directory = "./dist"
+# SPA routing - todas las rutas van a index.html
+binding = "ASSETS"
+
+# Configuración para SPA (Single Page Application)
+[[assets.redirects]]
+from = "/*"
+to = "/index.html"
+status = 200 
